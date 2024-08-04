@@ -15,6 +15,19 @@ type TCardProps = {
     button: string
 }
 
+
+
+const CardComponent = ({ header, desc, button }: TCardProps) => {
+    return <Card className="w-[350px]" style={{ padding: 10 }}>
+        <CardHeader className="text-4xl bold  align-center font-semibold tracking-tight pb-3" style={{ alignItems: 'center' }}>{header}</CardHeader>
+        <CardDescription style={{ padding: 20 }}>{desc}</CardDescription>
+        <CardFooter className="flex justify-center">
+            <Button>{button}</Button>
+        </CardFooter>
+    </Card>
+}
+
+
 const SectionTwo = () => {
 
     const scrollContentRef = useRef<HTMLDivElement>(null);
@@ -37,15 +50,6 @@ const SectionTwo = () => {
         scroll();
     }, []);
 
-    const CardComponent = ({ header, desc, button }: TCardProps) => {
-        return <Card className="w-[350px]" style={{ padding: 10 }}>
-            <CardHeader className="text-4xl bold  align-center font-semibold tracking-tight pb-3" style={{ alignItems: 'center' }}>{header}</CardHeader>
-            <CardDescription style={{ padding: 20 }}>{desc}</CardDescription>
-            <CardFooter className="flex justify-center">
-                <Button>{button}</Button>
-            </CardFooter>
-        </Card>
-    }
 
 
     const cardData = [{ id: 1, header: 'FRONTEND', desc: 'Prepare for frontend interview at pace,with quality content and off course without any cost', button: 'Start Preparing' },
@@ -67,4 +71,4 @@ const SectionTwo = () => {
     </div>
 }
 
-export default SectionTwo
+export { CardComponent, SectionTwo }

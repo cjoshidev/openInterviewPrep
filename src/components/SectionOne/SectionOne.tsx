@@ -15,6 +15,7 @@ const SectionOne = () => {
             justifyContent: 'center',
             position: 'relative',
             backgroundSize: '20px 20px',
+            padding: '20px'
         }}>
             <div style={{
                 zIndex: 1,
