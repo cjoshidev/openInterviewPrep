@@ -1,0 +1,7 @@
+.shiny-text {
+    background: linear-gradient(to right, #fff 20%, #000 40%, #fff 60%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s infinite linear;
+  }
