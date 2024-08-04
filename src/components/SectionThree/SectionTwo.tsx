@@ -17,19 +17,20 @@ type TCardProps = {
 
 const SectionTwo = () => {
 
-    const scrollContentRef = useRef(null);
-
+    const scrollContentRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const scrollContent = scrollContentRef.current;
         let scrollWidth = 0;
         const speed = 1;
 
         const scroll = () => {
-            scrollWidth -= speed;
-            if (Math.abs(scrollWidth) >= scrollContent?.scrollWidth / 5) {
-                scrollWidth = 0;
+            if (scrollContent) {
+                scrollWidth -= speed;
+                if (Math.abs(scrollWidth) >= scrollContent.scrollWidth / 5) {
+                    scrollWidth = 0;
+                }
+                scrollContent.style.transform = `translateX(${scrollWidth}px)`;
             }
-            scrollContent.style.transform = `translateX(${scrollWidth}px)`;
             requestAnimationFrame(scroll);
         };
 
@@ -58,7 +59,7 @@ const SectionTwo = () => {
         {cardData.map((item) => <CardComponent header={item.header} desc={item.desc} key={item.id} button={item.button} />)}
         <div className="scroll-container">
             <div className="scroll-content" ref={scrollContentRef}>
-                {companies.map((company, index) => (
+                {companies.map((company) => (
                     <div className="imgContainer">   <img src={company.logo} alt={company.name} /></div>
                 ))}
             </div>
