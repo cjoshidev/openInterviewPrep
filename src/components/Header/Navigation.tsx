@@ -15,8 +15,8 @@ const Navigation = () => {
         Learn
       </Link>
       <Link
+        onClick={() => window.location.href = "/dashboard"}
         style={{ fontSize: '16px' }}
-
         className="text-sm font-medium transition-colors hover:text-primary"
       >
         Practice
@@ -33,7 +33,19 @@ const Navigation = () => {
       >
         Roadmap
       </Link>
-    </NavigationMenu>
+      <Link
+        style={{ fontSize: '16px' }}
+        className="text-sm font-medium transition-colors hover:text-primary"
+      >
+        Discuss
+      </Link>
+      <Link
+        style={{ fontSize: '16px' }}
+        className="text-sm font-medium transition-colors hover:text-primary"
+      >
+        Referrals
+      </Link>
+    </NavigationMenu >
   )
 
 }

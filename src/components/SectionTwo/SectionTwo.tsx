@@ -53,9 +53,9 @@ const SectionTwo = () => {
 
 
     const cardData = [{ id: 1, header: 'FRONTEND', desc: 'Prepare for frontend interview at pace,with quality content and off course without any cost', button: 'Start Preparing' },
-    { id: 2, header: 'BACKEND', desc: 'Prepare for Backend interview at pace,with quality content and off course without any cost', button: 'Start Preparing' },
-    { id: 3, header: 'DEVOPS', desc: 'Prepare for DevOps interview at pace,with quality content and off course without any cost', button: 'Start Preparing' },
-    { id: 3, header: 'SDET/QA', desc: 'Prepare for SDET interview at pace,with quality content and off course without any cost', button: 'Start Preparing' }
+    { id: 2, header: 'BACKEND', desc: 'Prepare for Backend interview at pace,with quality content and off course without any cost', button: 'Coming Soon' },
+    { id: 3, header: 'DEVOPS', desc: 'Prepare for DevOps interview at pace,with quality content and off course without any cost', button: 'Coming Soon' },
+    { id: 3, header: 'SDET/QA', desc: 'Prepare for SDET interview at pace,with quality content and off course without any cost', button: 'Coming Soon' }
     ]
 
 

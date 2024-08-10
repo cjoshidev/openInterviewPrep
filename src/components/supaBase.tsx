@@ -7,7 +7,7 @@ function SupaBasePage() {
 
     useEffect(() => {
         async function getTodos() {
-            const { data } = await supabase.from('todos').select()
+            const { data } = await supabase.from('machine_coding_question').select()
             console.log(data)
         }
 
