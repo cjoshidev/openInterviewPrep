@@ -12,6 +12,7 @@ import Dashboard from './Pages/Dashboard.tsx'
 import Practice from './Pages/Practice.tsx'
 import { Toaster } from "@/components/ui/toaster"
 import Header from './components/Header/Header.tsx'
+import AddQuestions from './Pages/AddQuestions.tsx'
 
 
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/addquestionsmje",
+    element: <AddQuestions />,
   },
   {
     path: "*",
@@ -55,7 +60,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </div>
 
       <Toaster />
-    </React.StrictMode>,
-  </Auth0Provider>,
+    </React.StrictMode>
+  </Auth0Provider>
 
 )
