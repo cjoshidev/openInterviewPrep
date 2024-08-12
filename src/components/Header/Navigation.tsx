@@ -28,7 +28,6 @@ const Navigation = () => {
           Learn
         </Link>
         <Link
-          onClick={() => (window.location.href = "/dashboard")}
           className="text-sm font-medium transition-colors hover:text-primary"
         >
           Practice
